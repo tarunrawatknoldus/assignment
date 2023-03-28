@@ -1,14 +1,11 @@
 pipeline{
   agent any
-  triggers{
-    cron('* * * * *')
-  }
   stages
   {
     stage('build') {
       steps{
         sh "npm pack"
-        sh "npm install"
+        sh "npm start"
       }
     }
     stage('Deploy') {
