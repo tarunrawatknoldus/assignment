@@ -4,7 +4,7 @@ pipeline{
   {
     stage('build') {
       steps{
-        sh "npm start"
+        sh "python3 manage.py runserver"
       }
     }
     stage('Deploy') {
