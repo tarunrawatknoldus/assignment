@@ -6,11 +6,15 @@ pipeline{
   stages
   {
     stage('build') {
-      sh "npm pack"
-      sh "npm install"
+      steps{
+        sh "npm pack"
+        sh "npm install"
+      }
     }
     stage('Deploy') {
-      echo "deploy complete"
+      steps{
+        echo "deploy complete"
+      }
     }
    }
 }
