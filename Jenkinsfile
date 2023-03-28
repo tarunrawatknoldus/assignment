@@ -5,11 +5,11 @@ pipeline{
   }
   stages
   {
-    stage ('build') {
+    stage('build') {
       sh "npm pack"
       sh "npm install"
     }
-    stage ('Deploy') {
+    stage('Deploy') {
       echo "deploy complete"
     }
    }
